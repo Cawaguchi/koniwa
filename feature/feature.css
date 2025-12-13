@@ -23,13 +23,74 @@ img {
 /* =========================================================
    ヘッダー
    ========================================================= */
+
+
 header {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  padding: 60px 20px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 20px;
 }
 
+/* ナビ */
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+    display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  margin: 0;
+}
+
+/* ボタン風リンク */
+header .button {
+  background-color: #3a3a3a;
+  color: white;
+  padding: 6px 10px;   /* ← 横を狭く */
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 13px;
+  display: inline-block; /* ← 幅を文字分に */
+}
+header .button:hover {
+  background-color: #333;
+}
+
+
+
+/* タイトル */
+header h1 {
+  font-size: 24px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* ロゴアイコン */
+.top::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url(../photos/koniwalogo.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+}
+
+ 
 .site-title {
   font-size: 42px;
   font-weight: 300;
@@ -46,6 +107,17 @@ header {
   color: #5a5a5a;
   letter-spacing: 0.05em;
 }
+
+
+.setumei {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 60px 20px 40px;
+  margin-top: 30px;
+   scroll-margin-top: 80px;
+}
+
 
 /* =========================================================
    特集ブロック（中央揃え設定）
@@ -336,3 +408,72 @@ footer {
     margin: 5px 0;
   }
 }
+
+/* =========================================================
+   レスポンシブ対応（スマホ）
+   ========================================================= */
+@media (max-width: 600px) {
+
+  /* ヘッダ */
+  header {
+    padding: 8px 12px;
+  }
+
+  header h1 {
+    font-size: 18px;
+  }
+
+  .top::before {
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+  }
+
+  /* 戻るボタン */
+  header .button {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+
+  /* 固定ヘッダ対策 */
+  .setumei {
+    margin-top: 64px;
+    padding: 40px 16px 30px;
+    scroll-margin-top: 64px;
+  }
+
+  /* タイトル */
+  .site-title {
+    font-size: 28px;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-text {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  /* ギャラリー */
+  .gallery-scroll {
+    gap: 16px;
+    padding: 10px 16px 30px;
+  }
+
+  .brand-card {
+    flex: 0 0 85%;
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .button {
+    padding: 6px;
+    font-size: 0;
+  }
+
+  header .button::before {
+    content: "戻る";
+    font-size: 16px;
+  }
+}
+

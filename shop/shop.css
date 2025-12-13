@@ -104,7 +104,7 @@ body {
 .hero-image {
   position: absolute;
   inset: 0;
-  background-image: url("../photos/shop/cffret00.png");
+  background-image: url("../photos/shop/cffret00.jpg");
   background-size: cover;
   background-position: center;
   filter: brightness(0.5);
