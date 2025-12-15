@@ -122,6 +122,37 @@ body {
 }
 
 
+.kiwaseisakujo-image {
+  position: absolute;
+  inset: 0;
+  background-image: url("../photos/shop/kiwaseisakujo00.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  z-index: -1;
+}
+
+.delfonix-image {
+  position: absolute;
+  inset: 0;
+  background-image: url("../photos/shop/umihuku00.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  z-index: -1;
+}
+
+.silva-image {
+  position: absolute;
+  inset: 0;
+  background-image: url("../photos/shop/silva00.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  z-index: -1;
+}
+
+
 
 /* =============================
    ヒーローセクション
