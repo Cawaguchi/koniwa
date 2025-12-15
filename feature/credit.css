@@ -1,0 +1,149 @@
+/* =========================================================
+   credit.css
+   参考資料・クレジットページ専用スタイル
+   ========================================================= */
+
+/* メイン領域の幅と余白 */
+.credit-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 80px 20px 100px;
+}
+
+/* ---------------------------------------------------------
+   基本文字組
+--------------------------------------------------------- */
+.credit-section p,
+.credit-section li {
+  font-size: 15px;
+  line-height: 2;
+  color: #4a4a4a;
+  letter-spacing: 0.03em;
+}
+
+/* 補足テキスト */
+.credit-section .note {
+  font-size: 13px;
+  color: #7a7a7a;
+  margin-top: 8px;
+}
+
+/* ---------------------------------------------------------
+   見出し
+--------------------------------------------------------- */
+
+/* 大見出し */
+.credit-section h2 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 96px 0 24px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dcdad7;
+  letter-spacing: 0.08em;
+  color: #3a3a3a;
+}
+
+/* 中見出し（ブランド名など） */
+.credit-section h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 56px 0 16px;
+  letter-spacing: 0.06em;
+  color: #3a3a3a;
+}
+
+/* ---------------------------------------------------------
+   リスト（ブランド・商品）
+--------------------------------------------------------- */
+.brand-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.brand-list li {
+  padding: 20px 0 28px;
+  border-bottom: 1px solid #eceae7;
+}
+
+/* 最後の区切り線を消す */
+.brand-list li:last-child {
+  border-bottom: none;
+}
+
+/* ラベル表記 */
+.credit-section .label {
+  font-weight: 600;
+  color: #3a3a3a;
+}
+
+/* リンク */
+.credit-section a {
+  color: #3a3a3a;
+  text-decoration: underline;
+  text-decoration-color: #cfcac5;
+  text-underline-offset: 4px;
+}
+
+.credit-section a:hover {
+  opacity: 0.7;
+}
+
+/* ---------------------------------------------------------
+   クレジット情報
+--------------------------------------------------------- */
+.credit-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.credit-info li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+
+/* ---------------------------------------------------------
+   戻るリンク
+--------------------------------------------------------- */
+.modoru {
+  text-align: center;
+  margin: 80px auto 0;
+}
+
+.modoru a {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  color: #3a3a3a;
+  text-decoration: none;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #cfcac5;
+}
+
+.modoru a:hover {
+  opacity: 0.7;
+}
+
+/* ---------------------------------------------------------
+   レスポンシブ
+--------------------------------------------------------- */
+@media (max-width: 768px) {
+  .credit-section {
+    padding: 60px 16px 80px;
+  }
+
+  .credit-section h2 {
+    margin-top: 72px;
+    font-size: 20px;
+  }
+
+  .credit-section h3 {
+    font-size: 17px;
+  }
+
+  .credit-section p,
+  .credit-section li {
+    font-size: 14px;
+  }
+}
