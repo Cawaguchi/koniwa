@@ -1,32 +1,32 @@
 .formBtn {
-  width: 200px;
-  margin: 10px;
-  padding: 12px;
-  border-radius: 30px;
-  border: 1px solid #d4c4b0;
-  background: #fff;
-  font-size: 1em;
-  letter-spacing: 0.1em;
-  transition: 0.3s;
-  cursor: pointer;
+    width: 200px;
+    margin: 10px;
+    padding: 12px;
+    border-radius: 30px;
+    border: 1px solid #d4c4b0;
+    background: #fff;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    transition: 0.3s;
+    cursor: pointer;
 }
 
 .formBtn.primary {
-  background: #3a3a3a;
-  color: #fff;
-  border-color: #3a3a3a;
+    background: #3a3a3a;
+    color: #fff;
+    border-color: #3a3a3a;
 }
 
 .formBtn.primary:hover {
-  background: #5a5a5a;
+    background: #5a5a5a;
 }
 
 .formBtn.sub:hover {
-  background: #f5f3f0;
+    background: #f5f3f0;
 }
 
 .entryBtns,
 .confirmBtns {
-  text-align: center;
-  margin-bottom: 60px;
+    text-align: center;
+    margin-bottom: 60px;
 }

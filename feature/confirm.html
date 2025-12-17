@@ -2,78 +2,102 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <title>入力内容の確認 - Koniwa</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>入力内容の確認 - Koniwa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- CSS -->
-  <link href="feature.css" rel="stylesheet">
-  <link href="form-common.css" rel="stylesheet">
-  <link href="entry.css" rel="stylesheet">
+    <!-- CSS -->
+    <link href="feature.css" rel="stylesheet">
+    <link href="form-common.css" rel="stylesheet">
+    <link href="entry.css" rel="stylesheet">
 </head>
 
 <body>
-  <header>
-    <h1 class="top">Koniwa</h1>
-    <nav>
-      <ul>
-        <li>
-          <a href="../index.html" class="button">戻る</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <h1 class="top">Koniwa</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../index.html" class="button">戻る</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
 
-  <main class="setumei">
-    <h1>入力内容の確認</h1>
+    <main class="setumei">
+        <h1>入力内容の確認</h1>
 
-    <table class="entryTable">
-      <tr>
-        <th>お名前</th>
-        <td id="confirm-name"></td>
-      </tr>
-      <tr>
-        <th>メールアドレス</th>
-        <td id="confirm-email"></td>
-      </tr>
-      <tr>
-        <th>内容</th>
-        <td id="confirm-require"></td>
-      </tr>
-    </table>
+        <table class="entryTable">
+            <tr>
+                <th>お名前</th>
+                <td id="confirm-name"></td>
+            </tr>
+            <tr>
+                <th>メールアドレス</th>
+                <td id="confirm-email"></td>
+            </tr>
+            <tr>
+                <th>内容</th>
+                <td id="confirm-require"></td>
+            </tr>
+        </table>
 
-    <!-- ★ ここが重要：クラス名とボタン -->
-    <div class="confirmBtns">
-      <button type="button"
-              class="formBtn sub"
-              onclick="history.back()">
-        戻る
-      </button>
 
-      <button type="button"
-              class="formBtn primary"
-              onclick="alert('内容が送信されました\nありがとうございます。')">
-        送信
-      </button>
-    </div>
-  </main>
+        <div class="confirmBtns">
+            <button type="button" class="formBtn sub" onclick="history.back()">
+                戻る
+            </button>
 
-  <footer>
-    <p class="copyright">© Koniwa</p>
-  </footer>
+            <button type="button" class="formBtn primary" onclick="openModal()">送信</button>
 
-  <script>
-    const params = new URLSearchParams(window.location.search);
+            <!-- モーダル -->
+            <div id="modalOverlay" class="modal-overlay is-hidden">
+                <div class="modal-box">
+                    <p class="modal-text">
+                        内容が送信されました。<br>
+                        ありがとうございます。
+                    </p>
 
-    document.getElementById('confirm-name').textContent =
-      params.get('namae') || '';
+                    <div class="modalBtns">
+                        <button type="button" class="formBtn primary" onclick="closeModal()">
+                            閉じる
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-    document.getElementById('confirm-email').textContent =
-      params.get('email') || '';
+            <footer>
+                <p class="copyright">© Koniwa</p>
+            </footer>
 
-    document.getElementById('confirm-require').textContent =
-      params.get('require') || '';
-  </script>
+            <script>
+                const params = new URLSearchParams(window.location.search);
+
+                document.getElementById('confirm-name').textContent =
+                    params.get('namae') || '';
+
+                document.getElementById('confirm-email').textContent =
+                    params.get('email') || '';
+
+                document.getElementById('confirm-require').textContent =
+                    params.get('require') || '';
+            </script>
+
+            <script>
+                function openModal() {
+                    document
+                        .getElementById('modalOverlay')
+                        .classList.remove('is-hidden');
+                }
+
+                function closeModal() {
+                    document
+                        .getElementById('modalOverlay')
+                        .classList.add('is-hidden');
+                }
+            </script>
+
+
 </body>
 
 </html>

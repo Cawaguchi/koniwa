@@ -30,3 +30,53 @@
   text-align: center;
   margin-bottom: 60px;
 }
+
+
+/* ================================
+   モーダル
+   ================================ */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  max-width: 420px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.modal-text {
+  margin-bottom: 30px;
+  line-height: 1.8;
+  letter-spacing: 0.05em;
+}
+
+.modalBtns {
+  text-align: center;
+}
+
+/* モーダル非表示 */
+.modal-overlay.is-hidden {
+  display: none;
+}
+
+/* モーダル表示 */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
